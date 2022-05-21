@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Package') {
             steps {
-                sh 'tar cf "/ws/deploy-test-${GIT_BRANCH}b${BUILD_NUMBER}-${GIT_COMMIT}.tar" /ws/output/'
+                sh 'tar cf /ws/deploy-test-${GIT_BRANCH}b${BUILD_NUMBER}-${GIT_COMMIT}.tar /ws/output/'
             }
         }
         stage('Deploy') {
