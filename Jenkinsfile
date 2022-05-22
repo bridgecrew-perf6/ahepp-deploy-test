@@ -17,7 +17,7 @@ pipeline {
                 sshagent(credentials : ['jenkins']) {
                     sh '[ -d ~/.ssh ] || mkdir ~/.ssh && chmod 0700 ~/.ssh'
                     sh 'ssh-keyscan -t rsa,dsa ahepp.dev >> ~/.ssh/known_hosts'
-                    sh 'scp -v /ws/deploy-test* root@ahepp.dev:/usr/local/www/iso/'
+                    sh 'scp -v /ws/deploy-test* root@ahepp.dev:/usr/local/www/x15/'
                 }
             }
         }
